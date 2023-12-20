@@ -1,1 +1,1 @@
-# Estudo-Estat-stico-do-Cont-nuo-de-Lyman
+# Estudo Estatistico do Continuo de Lyman
