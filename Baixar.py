@@ -56,7 +56,7 @@ import re
 import os
 
 if __name__ == "__main__":
-    direct = r"C:\Users\tvd\Documents\DanielNeri\TCC\Codigos"
+    direct = r"C:\YOUR\DIRECTORY\" #change acourding to you own directory
     direct = direct.replace(os.sep, '/')
 
     for i in range(139):
