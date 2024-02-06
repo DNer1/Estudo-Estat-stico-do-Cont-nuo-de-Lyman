@@ -24,11 +24,11 @@ def getEVEinfo(i):
     day_of_year = str(day_of_year)
     DOY = str(day_of_year).rjust(3, '0')
     ano_evento = str(ano_evento)
-    # data_final = ano_evento + str(HORA_INICIAL) + str(HORA_FINAL) +  day_of_year
+
     
     head = 'EVS_L2_'
     
-    #EVS_L2_ANODIA_HORA_007.fit.gz
+
 
     file = [head + ano_evento + DOY + '_' + startHOUR + '_007_02.fit.gz']
     
@@ -36,14 +36,12 @@ def getEVEinfo(i):
         file2 = head + ano_evento + DOY + '_' + stopHOUR + '_007_02.fit.gz'
         file.append(file2)
         
-    # print(file)
-    # print(s_RBN)
-    # print(bind)
+
     return file,ano_evento,DOY,startHOUR,stopHOUR
 
 def baixar_arquivo(url, endereco_local):
     import requests
-    # faz requisição ao servidor
+
     resposta = requests.get(url)
     if resposta.status_code == requests.codes.OK:
         with open(endereco_local, 'wb') as novo_arquivo:
@@ -73,6 +71,6 @@ if __name__ == "__main__":
             arquivo_1 = BASE_URL + str(file[0])
             arquivos = [arquivo_1]
 
-        # print(arquivos)
+
         for j in range(len(arquivos)):
             baixar_arquivo(arquivos[j],os.path.join(direct, os.path.basename(arquivos[j])))
